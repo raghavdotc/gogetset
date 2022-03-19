@@ -7,7 +7,7 @@ Makes use of reflection to deal with different types such as Ptr, Map, Struct, A
 This can be used in production for use-cases included in the tests, and can also be extended to handle for more edge-cases.
 
 
-`
+```
 inputMap := map[string]interface{}{
 		"a": []int{1, 2, 3},
 		"b":        1,
@@ -28,7 +28,7 @@ inputMap := map[string]interface{}{
 	}
 value, err := Get("a.e.A.Hello", inputMap)
 // value = "world2"
-`
+```
 
 
 More examples can be found in:
