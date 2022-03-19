@@ -8,26 +8,27 @@ This can be used in production for use-cases included in the tests, and can also
 
 
 ```
-inputMap := map[string]interface{}{
-		"a": []int{1, 2, 3},
-		"b":        1,
-		"b":     "string1",
-		"d": map[string]interface{}{
-			"a":    2,
-			"b": "string2",
-			"c": structSample{Hello: "world2"},
-			"d":    level2Ptr,
-			"e": embeddingStructSample{
-				A: structSample{Hello: "embeddingWorld"},
-				B: map[string]string{
-					"a": "value",
-				},
+var inputMap = map[string]interface{}{
+	"a": []int{1, 2, 3},
+	"b":        1,
+	"b":     "string1",
+	"d": map[string]interface{}{
+		"a":    2,
+		"b": "string2",
+		"c": structSample{Hello: "world2"},
+		"d":    level2Ptr,
+		"e": embeddingStructSample{
+			A: structSample{Hello: "embeddingWorld"},
+			B: map[string]string{
+				"a": "value",
 			},
-			"f": []int{4, 5, 6},
 		},
-	}
-value, err := Get("a.e.A.Hello", inputMap)
-// value = "world2"
+		"f": []int{4, 5, 6},
+	},
+}
+	
+value, err := Get("d.e.A.Hello", inputMap)
+// value = "embeddingWorld"
 ```
 
 
