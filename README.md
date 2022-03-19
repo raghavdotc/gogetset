@@ -1,6 +1,6 @@
 # gogetset
 
-Can be used to get and set values in nested go structs and maps. 
+Get and Set values in nested go structs and maps. 
 
 Makes use of reflection to deal with different types such as Ptr, Map, Struct, Array, Slices, and other custom types you may have in your application.
 
